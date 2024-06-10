@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculararea(l1,l2){
+    var area = l1 * l2;
+    return area;
+}
+
+        function calcularperimetro(l1,l2){
+            var perimetro = l1 + l2;
+            return perimetro;
+}
+
+        function mostrarCalculos(l1, l2){
+            const area = calculararea(l1,l2)
+            const perimetro = calcularperimetro(l1,l2)
+            console.log("El area es " + area + " y el perimetro es " + perimetro + " Dimensiones: L1 = "+l1+ ", L2 = "+l2);
+            
+        }
+
+
+mostrarCalculos(5,3)
+
+function ingresarValor(){
+    let lado = null
+        do{
+            lado = +prompt("Ingrese el primer lado",0)
+        }while(isNaN(lado))
+    return lado
+}
+
+//lado1 = ingresarValor()
+</script>
+<button onclick="ingresarValor()">Click</button>
+</body>
+</html>
